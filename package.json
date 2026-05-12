@@ -1,0 +1,19 @@
+{
+  "name": "commit-formal",
+  "version": "1.0.0",
+  "description": "CLI para escribir commits de git estandarizados",
+  "main": "dist/main.js",
+  "bin": {
+    "commit-formal": "./bin/commit-formal"
+  },
+  "scripts": {
+    "build": "coffee -c -o dist src/*.coffee && node add-shebang.js",
+    "dev": "coffee src/main.coffee",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  },
+  "keywords": ["git", "commit", "cli", "conventional-commits"],
+  "license": "MIT"
+}

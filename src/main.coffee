@@ -10,7 +10,6 @@ path         = require 'path'
 { formatCommit }                            = require './formatter'
 { install }                                 = require './installer'
 
-# Carga config del proyecto actual o usa defaults.
 loadConfig = ->
   configPath = path.join process.cwd(), '.formal', 'config.json'
   if fs.existsSync configPath
@@ -19,7 +18,6 @@ loadConfig = ->
     types: ['feat','fix','docs','style','refactor','test','chore','perf','revert']
     scopes: []
 
-# Flujo principal interactivo.
 run = ->
   args = process.argv.slice 2
 
